@@ -1,0 +1,32 @@
+// HY-S301 8x IR Sensor Module - Light/Dark Detection
+// For Arduino Leonardo
+
+const int sensorPins[8] = {2, 3, 4, 5, 6, 7, 8, 9};
+int sensorValues[8];
+
+void setup() {
+  Serial.begin(9600);
+  while (!Serial); // Wait for Serial Monitor (Leonardo only)
+
+  // Set all sensor pins as inputs
+  for (int i = 0; i < 8; i++) {
+    pinMode(sensorPins[i], INPUT);
+  }
+
+  Serial.println("HY-S301 8x IR Sensor Ready");
+}
+
+void loop() {
+  Serial.print("Sensors: ");
+
+  for (int i = 2; i < 10; i++) {
+    sensorValues[i] = digitalRead(sensorPins[i]);
+
+    // Print 1 = light, 0 = dark
+    Serial.print(sensorValues[i]);
+    Serial.print(" ");
+  }
+
+  Serial.println();
+  delay(200);
+}
