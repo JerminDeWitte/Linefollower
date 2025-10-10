@@ -1,16 +1,22 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial BTSerial(10, 11); // RX, TX
+SoftwareSerial BTSerial(0, 1); // RX, TX; Kan aangepast afhankelijk van ons breakout Arduino bord
+int LED = 13;
 
 void setup() {
+  pinMode(LED, OUTPUT);
   Serial.begin(9600);
   BTSerial.begin(9600);
   Serial.println("HC-05 ready");
 }
 
 void loop() {
-  if (BTSerial.available())
+  if (BTSerial.available()){
     Serial.write(BTSerial.read());
-  if (Serial.available())
+    digitalWrite(LED,HIGH);
+    }
+  if (Serial.available()){
     BTSerial.write(Serial.read());
+    digitalWrite(LED,LOW);
+    }
 }
