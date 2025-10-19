@@ -1,31 +1,30 @@
-// HY-S301 8x IR Sensor Module - Light/Dark Detection
-// For Arduino Leonardo
+// HY-S301 8x IR Sensor Module - Analog Light/Dark Detection
+// Using 6 analog channels (A0–A5) on Arduino Leonardo
 
-const int sensorPins[8] = {2, 3, 4, 5, 6, 7, 8, 9};
-int sensorValues[8];
+const int sensorPins[6] = {A0, A1, A2, A3, A4, A5};
+int sensorValues[6];
 
 void setup() {
   Serial.begin(9600);
   while (!Serial); // Wait for Serial Monitor (Leonardo only)
 
-  // Set all sensor pins as inputs
-  for (int i = 0; i < 8; i++) {
-    pinMode(sensorPins[i], INPUT);
-  }
-
-  Serial.println("HY-S301 8x IR Sensor Ready");
+  Serial.println("HY-S301 Analog IR Sensor (6 channels on A0–A5) Ready");
 }
 
 void loop() {
-  Serial.print("Sensors: ");
+  Serial.print("Sensor values: ");
 
-  for (int i = 2; i < 10; i++) {
-    sensorValues[i] = digitalRead(sensorPins[i]);
-
-    // Print 1 = light, 0 = dark
+  for (int i = 0; i < 6; i++) {
+    sensorValues[i] = analogRead(sensorPins[i]);
     Serial.print(sensorValues[i]);
     Serial.print(" ");
   }
+
+  Serial.println();
+
+  delay(200);
+}
+
 
   Serial.println();
   delay(200);
