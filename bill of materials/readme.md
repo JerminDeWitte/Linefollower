@@ -5,10 +5,10 @@
 |----------|----|------------|-----------|---------|------|---------|
 | 1 | Aslong DC-Transmissiemotor | JGA12-N20-30 - 6V - 500RPM      | nieuw | €4,50   | 2 | €9,00   |
 | 2 | 8x IR Lijn Tracking Module | HY-S301                         | nieuw | €3,50   | 1 | €3,50   |
-| 3 | Wielen                     | Pololu Wheel 60×8mm Pair - Blue | nieuw | €1,0075 | 2 | €2,015  |
-| 4 | Dual Motor Driver          | TB6612FNG                       | nieuw | €1,338  | 1 | €1,338  |
+| 3 | Wielen                     | Pololu Wheel 60×8mm Pair - Blue | nieuw | €1,01 | 2 | €2,02  |
+| 4 | Dual Motor Driver          | TB6612FNG                       | nieuw | €8.99  | 1 | €8.99  |
 | 5 | HC-05 Wireless Module      | RN-42                           | nieuw | €3,80   | 1 | €3,80   |
-| 6 | Arduino Leonardo           | atmega32u4                      | recup | €3,02   | 1 | €3,02   |
+| 6 | Arduino Leonardo           | atmega32u4                      | recup | €15.19   | 1 | €15.19   |
 | 7 | Soldeerbord                | PCB Board Prototype Kit         | recup | €1.39   | 1 | €1.39   |
 | 8 | Batterijen                 | EVE ICR18650-26VA 2650mAh - 13A | recup | €3.13   | 2 | €6.26   |
 | 9 | Batterijhouder             | Batterijhouder met 4 pinnen     | nieuw | €1.5    | 1 | €1.5   |
